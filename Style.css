@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    background-color: #90afc5;
+}
+header{
+    height: 13vh;
+    background-color: #336b87;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+}
+h1{
+    margin: 0;
+    padding: 25px;
+}
+.Wraper{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+.Tablero{
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(3,1fr);
+    justify-items: center;
+}
+.Posicion{
+    width: 150px;
+    height: 150px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 5rem;
+}
