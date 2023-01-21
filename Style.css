@@ -14,13 +14,26 @@ h1{
     padding: 25px;
 }
 .Wraper{
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    display: none;
+}
+form{
+    margin-top: 150px;
+    text-align: center;
+}
+label,input{
+    font-size: 2rem;
+}
+input{
+    margin-bottom: 15px;
 }
 .Tablero{
     display: grid;
-    grid-template: repeat(3,1fr)/repeat(3,1fr);
+    grid-template: repeat(3,150px)/repeat(3,150px);
     justify-items: center;
 }
 .Posicion{
