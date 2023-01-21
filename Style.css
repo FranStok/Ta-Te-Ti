@@ -19,6 +19,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     display: none;
 }
 form{
@@ -30,6 +31,9 @@ label,input{
 }
 input{
     margin-bottom: 15px;
+}
+.EstadoJuego{
+    padding: 0;
 }
 .Tablero{
     display: grid;
