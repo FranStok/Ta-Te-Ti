@@ -70,7 +70,11 @@ const Tablero=(()=>{
         Jugador2=FabricaJugadores(J2,"O");
         Turno=Jugador1;
     }
-    return {Actualizar,SetJugadores};
+    const Reinicio=()=>{
+        Posiciones.forEach((element,index) => Posiciones[index]=0);
+        Finalizo=0;
+    }
+    return {Actualizar,SetJugadores,Reinicio};
 })();
 
 const FabricaJugadores=(Nombre,Simbolo)=>{
@@ -98,7 +102,20 @@ Submit.addEventListener("click",(e)=>{
         Form.style.display="none";
         Wraper.style.display="flex";
         let Estado=document.querySelector(".EstadoJuego");
-        Estado.textContent="Turno del jugador X: "+J1.Nombre;
+        Estado.textContent="Turno del jugador X: "+J1;
     }else
         alert("Los nombres son iguales o estan vacios");
+})
+const Reiniciar=document.querySelector(".Reiniciar");
+Reiniciar.addEventListener("click",(e)=>{
+    e.preventDefault();
+    let Form=document.querySelector("form");
+    let Wraper=document.querySelector(".Wraper");
+    let Inputs=document.querySelectorAll("input[name]"); // Selecciona los inputs que tengan el atributo nombre.
+    let Posiciones=document.querySelectorAll(".Posicion");
+    Inputs.forEach(Input => Input.value="");
+    Posiciones.forEach(element => element.textContent="");
+    Wraper.style.display="none";
+    Form.style.display="block";
+    Tablero.Reinicio();
 })
