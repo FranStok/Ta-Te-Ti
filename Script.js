@@ -1,7 +1,7 @@
 const Tablero=(()=>{
     const Posiciones=[0,0,0,0,0,0,0,0,0];
     let Termino=false;
-    let Turno="X"
+    let Turno="X";
     const Actualizar=(Index,SimboloActual)=>{
         if(!Termino){
             if(Posiciones[Index]==0){
